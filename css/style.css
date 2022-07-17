@@ -1,0 +1,89 @@
+.l-app{
+  display: flex;
+  flex-direction: column;
+}
+
+.header-app{
+  width: 100%;
+  height: 5%;
+  background-color: #1e90ff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.main-app{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.l-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.central-app{
+  width: 80%;
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 20px;
+}
+
+.aside-app{
+  width: 20%;
+  height: 230px;
+  margin-top: 20px;
+  padding: 30px;
+  background-color: rgb(240, 245, 240);
+  color: rgb(76, 130, 200);
+  border: 2px solid rgb(76, 130, 200);
+  border-radius: 10px;
+}
+
+.section-app{
+  width: 33.33%;
+  margin-top: 20px;
+  background-color: floralwhite;
+  border: 2px solid rgb(76, 130, 200);
+  border-radius: 10px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.section-app .section-status-title{
+  font-size: 12;
+  color: rgb(76, 130, 200);
+  padding-left: 30px;
+  align-content: center;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+
+}
+
+.form-new-task{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.row-form{
+  display: flex;
+  flex-direction: column;
+  
+}
+

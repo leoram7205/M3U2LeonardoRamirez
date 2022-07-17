@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form-task.css" />
+    <link rel="shortcut icon" href="./assets/trello-icon.svg" type="image/x-icon" />
+    <title>Kanban App</title>
+  </head>
+  <body class="l-app" id="app">
+    <!-- Header -->
+    <header class="header-app">
+      <div class="header-app">
+        <img class="logo" src="./assets/trello-tile.svg" alt="Logo Kanban App"/>
+        <button class="button button-primary" id="btnNewTask">
+          Crear Nueva Tarea
+        </button>
+      </div>
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Kanban -->
+    <main class="main-app">
+      <div class="central-app">
+        <!-- <div class="l-container"> -->
+          <!-- Columna tareas por hacer -->
+          <section class="section-app">
+            <h2 class="section-status-title">Por Hacer</h2>
+            <div class="container-task" id="todoTasks"></div>
+          </section>
+          <!-- Fin tareas por hacer -->
+          <!-- Columna tareas en proceso -->
+          <section class="section-app">
+            <h2 class="section-status-title">En Proceso</h2>
+            <div class="container-task" id="progressTasks"></div>
+          </section>
+          <!-- Fin tareas en proceso -->
+          <!-- Columna tareas finalizadas -->
+          <section class="section-app">
+            <h2 class="section-status-title">Finalizadas</h2>
+            <div class="container-task" id="doneTasks"></div>
+          </section>
+          <!-- Fin tareas finalizadas -->
+        <!-- </div> -->
+      </div>
+      <!-- Aside crear nueva tarea -->
+      <aside class="aside-app" id="modalNewTask">
+            <h2 class="aside-form-title">Nueva tarea</h2>
+            <form id="formNewTask" class="form-new-task">
+              <!-- Input Titulo -->
+              <div class="row-form">
+                <label for="titleTask" class="form-newtask_label">Titulo:</label>
+                <input id="titleTask" name="titletask" type="text" class="form-new-task_input" placeholder="Escribe un titulo para la tarea"></input>
+              </div>
+              <!-- Fin Input Titulo -->
+              <!-- Input Respopnsable -->
+              <div class="row-form">
+                <label
+                  for="responsibleTask"
+                  class="form-newtask_label"
+                >Responsable</label>
+                <select name="responsibleTask" id="responsibleTask">
+                  <option value="">- Seleccionar -</option>
+                  <option value="User01">Usuario 01</option>
+                  <option value="User02">Usuario 02</option>
+                  <option value="User03">Usuario 02</option>
+                </select>
+              </div>
+              <!-- Fin Input Respopnsable -->
+              <!-- Input Deadline -->
+              <div class="row-form">
+                <label for="deadLineTask" class="from-new-task_label"
+                  >Plazo de entrega:
+                </label>
+                <select name="deadLineTask" id="deadLineTask">
+                  <option value="">- Seleccionar -</option>
+                  <option value="oneDay">Un Día</option>
+                  <option value="twoDay">Dos Días</option>
+                  <option value="sevenDay">Una Semana</option>
+                </select>
+              </div>
+              <!-- Fin Input Deadline -->
+              <!-- Botones -->
+              <div class="row-form">
+                <div class="form-new-task_buttons">
+                  <button class="button button-primary" type="submit">Guardar</button>
+                  <button class="button button-secondary ghost" id="btnCancelNewTask">Cancelar</button>
+                </div>
+              </div>
+              <!-- Fin Botones -->
+            </form>
+      </aside>
+      <!-- Fin aside -->
+    </main>
+    <!-- Fin Kanban -->
+  </body>
+</html>
