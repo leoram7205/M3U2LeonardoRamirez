@@ -1,20 +1,19 @@
 .l-app{
-  display: flex;
-  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .header-app{
-  width: 100%;
-  height: 5%;
-  background-color: #1e90ff;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 70px 1fr 150px;
+  gap: 20px;
 }
 
 .titulo-header{
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
   font-size: xx-large;
-  color: #ffffff;
+  color: #3367c8;
 }
 
 .logo{
@@ -37,15 +36,26 @@
 }
 
 .central-app{
-  width: 80%;
+  width: 100%;
+ 
+  margin-left: 40px;
+  margin-right: 40px;
   display: flex;
-  /* justify-content: space-around; */
-  gap: 20px;
+  text-align: center;
+  gap: 40px;
 }
 
 .aside-app{
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  transform: translate(100% );
+  /* will-change: transform; */
+  /* transition: transform 300ms ease-in-out; */
+
   width: 20%;
-  height: 230px;
+  height: 260px;
   margin-top: 20px;
   padding: 30px;
   background-color: rgb(240, 245, 240);
@@ -54,13 +64,18 @@
   border-radius: 10px;
 }
 
+.aside-app.active
+{
+  transform: initial;
+}
+
 .section-app{
   width: 33.33%;
   margin-top: 20px;
-  background-color: floralwhite;
-  border: 2px solid rgb(76, 130, 200);
+  background-color: rgb(192, 221, 241);
   border-radius: 10px;
-  height: 500px;
+  height: 650px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0,0.25);
 
   display: flex;
   flex-direction: column;
@@ -69,16 +84,42 @@
 
 .section-app .section-status-title{
   font-size: 12;
-  color: rgb(76, 130, 200);
-  padding-left: 30px;
-  align-content: center;
+  color: royalblue;
+  
+}
+
+.container-task{
+  border: 2px solid rgb(76, 130, 200);
 }
 
 .button {
   background-color: #ffffff;
   color: #1e90ff;
   border: 1px solid #1e90ff;
+  height: 20px;
+  border-radius: 5px;
+  /* padding: 10px; */
 
+}
+
+.button-h{
+  background-color: #ffffff;
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+  height: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0,0.25);
+}
+
+.head-button{
+  /* background-color: #ffffff; */
+  color: #1e90ff;
+  /* border: 1px solid #1e90ff; */
+  /* border-radius: 5px; */
+  text-align: center;
+
+  display: flex;
+  align-items: center;
 }
 
 .form-new-task{
@@ -92,4 +133,6 @@
   flex-direction: column;
   
 }
+
+
 

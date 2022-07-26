@@ -12,13 +12,11 @@
   <body class="l-app" id="app">
     <!-- Header -->
     <header class="header-app">
-      <div class="header-app">
         <img class="logo" src="./assets/trello-tile.svg" alt="Logo Kanban App"/>
         <h2 class="titulo-header">Tablero de Control basado en Trello</h2>
-        <button class="button button-primary" id="btnNewTask">
-          Crear Nueva Tarea
-        </button>
-      </div>
+        <div class="head-button">
+          <button class="button-h" id="btnNewTask">Crear Nueva Tarea</button>
+        </div>
     </header>
     <!-- Fin Header -->
 
@@ -46,6 +44,8 @@
           <!-- Fin tareas finalizadas -->
         <!-- </div> -->
       </div>
+    </main>
+    <!-- Fin Kanban -->
       <!-- Aside crear nueva tarea -->
       <aside class="aside-app" id="modalNewTask">
             <h2 class="aside-form-title">Nueva tarea</h2>
@@ -58,35 +58,21 @@
               <!-- Fin Input Titulo -->
               <!-- Input Respopnsable -->
               <div class="row-form">
-                <label
-                  for="responsibleTask"
-                  class="form-newtask_label"
-                >Responsable</label>
-                <select name="responsibleTask" id="responsibleTask">
-                  <option value="">- Seleccionar -</option>
-                  <option value="User01">Usuario 01</option>
-                  <option value="User02">Usuario 02</option>
-                  <option value="User03">Usuario 02</option>
-                </select>
+                <label for="responsibleTask" class="form-newtask_label">Responsable</label>
+                <select name="responsibleTask" id="responsibleTask"> -- Seleccione un usuario -- </select>
               </div>
               <!-- Fin Input Respopnsable -->
               <!-- Input Deadline -->
               <div class="row-form">
-                <label for="deadLineTask" class="from-new-task_label"
-                  >Plazo de entrega:
+                <label for="deadLineTask" class="from-new-task_label">Plazo de entrega:
                 </label>
-                <select name="deadLineTask" id="deadLineTask">
-                  <option value="">- Seleccionar -</option>
-                  <option value="oneDay">Un Día</option>
-                  <option value="twoDay">Dos Días</option>
-                  <option value="sevenDay">Una Semana</option>
-                </select>
+                <input type="date" name="deadLineTask" id="deadLineTask">
               </div>
               <!-- Fin Input Deadline -->
               <!-- Botones -->
               <div class="row-form">
                 <div class="form-new-task_buttons">
-                  <button class="button button-primary" type="submit">Guardar</button>
+                  <button class="button button-primary" type="submit" >Guardar</button>
                   <button class="button button-secondary ghost" id="btnCancelNewTask">Cancelar</button>
                 </div>
               </div>
@@ -94,7 +80,9 @@
             </form>
       </aside>
       <!-- Fin aside -->
-    </main>
-    <!-- Fin Kanban -->
+
+    <script src="data/selectUsuarios.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <script src="manageModal.js"></script>
   </body>
 </html>

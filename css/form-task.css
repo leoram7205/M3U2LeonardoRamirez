@@ -1,7 +1,10 @@
+.aside-form-title{
+    text-align: center;
+}
 .form-new-task{
     display: flex;
     flex-direction: column;
-    gap: inherit;
+    gap: 20px;
 }
 
 .row-form{
@@ -25,5 +28,5 @@ select{
 
 .form-new-task_buttons{
     display: flex;
-    gap: calc(10/2);
+    justify-content: space-around;
 }
