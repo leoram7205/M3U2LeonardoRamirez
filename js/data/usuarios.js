@@ -1,5 +1,9 @@
 export const usuarios = [
     {
+        id: 0,
+        user: " -- Seleccione una opción -- "
+    },
+    {
         id: 1,
         user: "Leonardo Ramírez"
     },

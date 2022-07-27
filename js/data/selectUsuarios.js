@@ -1,4 +1,4 @@
-import { usuarios } from "./usuarios.js"; 
+import { usuarios } from "./usuarios.js";
 
 let selectHTML = document.getElementById('responsibleTask');
 
@@ -17,7 +17,6 @@ const presentarUsuarios = async () => {
         selectHTML.innerHTML += optionHTML
     }
 }
-export {
-    presentarUsuarios,
-    obtenerUsuarios
-}
+presentarUsuarios()
+
+export default obtenerUsuarios

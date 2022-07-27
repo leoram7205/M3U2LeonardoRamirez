@@ -73,16 +73,22 @@
               <div class="row-form">
                 <div class="form-new-task_buttons">
                   <button class="button button-primary" type="submit" >Guardar</button>
-                  <button class="button button-secondary ghost" id="btnCancelNewTask">Cancelar</button>
+                  <button class="button button-secondary ghost" type="reset" id="btnCancelNewTask">Cancelar</button>
                 </div>
               </div>
               <!-- Fin Botones -->
             </form>
       </aside>
       <!-- Fin aside -->
+    <script src="js/libraries/axios.js"></script>
+    <script src="js/libraries/moment.js"></script>
+    <script src="js/libraries/draggable.js"></script>
+    <script src="js/libraries/hammer.js"></script>
 
-    <script src="data/selectUsuarios.js" type="module"></script>
-    <script src="index.js" type="module"></script>
-    <script src="manageModal.js"></script>
+    <script src="js/api/consumo.js" type="module"></script>
+    <script src="js/data/selectUsuarios.js" type="module"></script>
+    <script src="js/utils/dragAndDrop.js"></script>
+    <script src="js/utils/manageModal.js"></script>
+    <script src="js/utils/newTask.js" type="module"></script>
   </body>
 </html>
