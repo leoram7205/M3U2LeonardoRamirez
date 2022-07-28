@@ -3,6 +3,7 @@
       {
         "id": 1,
         "title": "Desarrollo autenticación",
+        "details":"Se debe desarrollar la funcionadlidad de autenticación",
         "person": 3,
         "state": "done",
         "deadline": "28-07-2022",
@@ -11,6 +12,7 @@
       {
         "id": 2,
         "title": "Desarrollo captura datos",
+        "details":"Se debe desarrollar la funcionalidad para capturar los datos",
         "person": 4,
         "state": "to-do",
         "deadline": "15-07-2022",
