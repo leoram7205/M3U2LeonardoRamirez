@@ -1,4 +1,4 @@
 const sort = new Sortable.default(
-    document.querySelectorAll('.container-task'),
+    document.querySelectorAll('.section-app'),
     {draggable: 'article'}
 )
