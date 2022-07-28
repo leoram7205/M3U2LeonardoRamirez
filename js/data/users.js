@@ -1,4 +1,4 @@
-export const usuarios = [
+export const users = [
     {
         id: 0,
         user: " -- Seleccione una opción -- "

@@ -1,4 +1,4 @@
-import obtenerUsuarios from "../data/selectUsuarios.js";
+import getUsers from "../data/selectUsers.js";
 
 const API_URL = "https://my-json-server.typicode.com/leoram7205/M3U2LeonardoRamirez"
 
@@ -22,15 +22,16 @@ const createTask = (task) => {
   
     let taskResponsible = document.createElement("p");
     taskResponsible.classList.add("card_task__responsible");
-    let usuarios = obtenerUsuarios(task.person);
-    let usuario = usuarios.then((usuarios)=>{
-        console.log(usuarios.user)
-        taskResponsible.innerHTML = `<span class="card_task__responsible--tag-creator">Responsable:</span> ${usuarios.user}`;
+    let users = getUsers(task.person);
+
+    users.then((person)=>{
+        console.log(person.user)
+        taskResponsible.innerHTML = `<span class="card_task__responsible--tag-creator">Responsable:</span> ${person.user}`;
     })
     
-    // let taskDetails = document.createElement("p");
-    // taskDetails.classList.add("card-task__details");
-    // taskDetails.innerHTML = `<span class="card-task__details--task-details">Descripción:</span> ${task.details} `;
+    let taskDetails = document.createElement("p");
+    taskDetails.classList.add("card-task__details");
+    taskDetails.innerHTML = `<span class="card-task__details--task-details">Descripción:</span> ${task.details} `;
   
     let taskDate = document.createElement("p");
     taskDate.classList.add("card-task__date");
@@ -42,7 +43,7 @@ const createTask = (task) => {
     
     newTask.appendChild(taskTitle);
     newTask.appendChild(taskResponsible);
-    // newTask.appendChild(taskDetails);
+    newTask.appendChild(taskDetails);
     newTask.appendChild(taskDate);
     newTask.appendChild(taskCreate)
   
@@ -52,13 +53,13 @@ const createTask = (task) => {
   
     // Preguntamos dependiendo el state que trae nuestra API es igual a to-do lo ubique en esa columna
     if (task.state === "to-do") {
-      columnToDo?.appendChild(newTask);
+      columnToDo.appendChild(newTask);
     }
     if (task.state === "in-progress") {
-      columnInProgress?.appendChild(newTask);
+      columnInProgress.appendChild(newTask);
     }
     if (task.state === "done") {
-      columnDone?.appendChild(newTask);
+      columnDone.appendChild(newTask);
     }
   };
 

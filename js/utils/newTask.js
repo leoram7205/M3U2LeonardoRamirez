@@ -1,15 +1,16 @@
-import createTask from "../api/consumo.js";
+import createTask from "../api/request.js";
 
 const form = document.querySelector('#formNewTask')
 const API_URL = "https://my-json-server.typicode.com/leoram7205/M3U2LeonardoRamirez"
 
-form?.addEventListener('submit', (eve)=>{
+form.addEventListener('submit', (eve)=>{
     eve.preventDefault();
     const formData = eve.target;
 
     const data = {
         title: formData.titleTask.value,
         person: formData.responsibleTask.value,
+        details: formData.detailsTask.value,
         deadline: formData.deadLineTask.value,
         created: '26/07/2022',
         state: 'to-do'
