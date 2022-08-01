@@ -6,13 +6,15 @@ const API_URL = "https://my-json-server.typicode.com/leoram7205/M3U2LeonardoRami
 form.addEventListener('submit', (eve)=>{
     eve.preventDefault();
     const formData = eve.target;
+    const fechaCreated = new Date();
+    const fechaDeadLine = new Date(formData.deadLineTask.value)
 
     const data = {
         title: formData.titleTask.value,
         person: formData.responsibleTask.value,
         details: formData.detailsTask.value,
-        deadline: formData.deadLineTask.value,
-        created: '26/07/2022',
+        deadline: fechaDeadLine.toLocaleDateString(),
+        created: fechaCreated.toLocaleDateString(),
         state: 'to-do'
     }
     console.log('%cnewTask.js line:14 data', 'color: #007acc;', data);
